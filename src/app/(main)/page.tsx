@@ -51,7 +51,7 @@ export default function Home() {
           prefixIcon="copy"
           arrowIcon
         >
-          Explore docs
+          Explore docs.
         </Button>
       </Column>
     </Column>
