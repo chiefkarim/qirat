@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -13,12 +13,22 @@ export function SiteFooter() {
                   <rect x="18" y="4" width="10" height="10" />
                   <rect x="4" y="18" width="10" height="10" />
                   <rect x="18" y="18" width="10" height="10" />
-                  <rect x="11" y="11" width="10" height="10" fill="white" stroke="black" strokeWidth="2" />
+                  <rect
+                    x="11"
+                    y="11"
+                    width="10"
+                    height="10"
+                    fill="white"
+                    stroke="black"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
               <span className="ml-2 text-lg font-medium">Qirat</span>
             </div>
-            <p className="text-gray-600 text-sm">Crafting digital solutions and empowering Algerian innovation.</p>
+            <p className="text-gray-600 text-sm">
+              Crafting digital solutions and empowering Algerian innovation.
+            </p>
           </div>
 
           <div className="space-y-4">
@@ -51,17 +61,26 @@ export function SiteFooter() {
             <h4 className="font-medium text-gray-900">Company</h4>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
-                <Link href="/about" className="hover:text-black transition-colors">
+                <Link
+                  href="/about"
+                  className="hover:text-black transition-colors"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-black transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-black transition-colors"
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-black transition-colors">
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-black transition-colors"
+                >
                   Privacy Policy
                 </Link>
               </li>
@@ -73,6 +92,7 @@ export function SiteFooter() {
             <div className="space-y-2 text-sm text-gray-600">
               <p>Algiers, Algeria</p>
               <p>contact@qiratnet.com</p>
+              <p>+213 (0) 555 123 456</p>
             </div>
           </div>
         </div>
@@ -82,5 +102,5 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
