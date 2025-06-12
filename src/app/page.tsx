@@ -43,7 +43,7 @@ export default function QiratLanding() {
             <div className="relative">
               <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                 <Image
-                  src="/hero-image.png"
+                  src="/images/header.jpg"
                   alt="3D geometric shapes on wooden surface with dramatic lighting"
                   fill
                   className="object-cover"
@@ -169,35 +169,21 @@ export default function QiratLanding() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg">
-                    <svg
-                      className="w-12 h-12 text-gray-700"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
+              <div className="aspect-square  rounded-lg flex flex-col items-center justify-center">
+                <div className="text-center space-y-4 size-full">
+                  <div className="w-full h-full relative bg-white rounded-lg overflow-hidden flex items-center justify-center mx-auto shadow-lg">
+                    <Image
+                      src="/images/alger.jpg"
+                      alt="place in algeria"
+                      fill
+                    />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-medium text-gray-900">
-                      Based in Algiers
-                    </h3>
-                    <p className="text-gray-600">Serving Algeria & Beyond</p>
-                  </div>
+                </div>
+                <div className="translate-x-3 text-center pt-2">
+                  <h3 className="text-xl font-medium text-gray-900">
+                    Based in Algiers
+                  </h3>
+                  <p className="text-gray-600">Serving Algeria & Beyond</p>
                 </div>
               </div>
             </div>
@@ -223,7 +209,7 @@ export default function QiratLanding() {
             </Button>
             <Button
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black px-8 py-3 rounded-full text-sm font-medium tracking-wide uppercase transition-colors"
+              className="border-white text-black hover:bg-gray-100   px-8 py-3 rounded-full text-sm font-medium tracking-wide uppercase transition-colors"
               size="lg"
             >
               Learn More
@@ -231,7 +217,6 @@ export default function QiratLanding() {
           </div>
         </div>
       </section>
-      {/* Footer */}
       <SiteFooter />
     </div>
   );
