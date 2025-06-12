@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import Link from "next/link";
 
 export default function QiratLanding() {
   return (
@@ -31,12 +31,12 @@ export default function QiratLanding() {
                 </p>
               </div>
 
-              <Button
-                className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full text-sm font-medium tracking-wide uppercase transition-colors"
-                size="lg"
+              <Link
+                href="/about"
+                className="bg-black block w-fit hover:bg-gray-800 text-white px-8 py-3 rounded-full text-sm font-medium tracking-wide uppercase transition-colors"
               >
                 Learn More
-              </Button>
+              </Link>
             </div>
 
             {/* Right Image */}
@@ -201,19 +201,12 @@ export default function QiratLanding() {
             digital solutions tailored to the Algerian market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
+            <Link
+              href="/contact"
               className="bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-full text-sm font-medium tracking-wide uppercase transition-colors"
-              size="lg"
             >
               Start Your Project
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-black hover:bg-gray-100   px-8 py-3 rounded-full text-sm font-medium tracking-wide uppercase transition-colors"
-              size="lg"
-            >
-              Learn More
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
