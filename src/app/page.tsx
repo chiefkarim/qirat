@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import Link from "next/link";
+import { Monitor, Smartphone, Zap } from "lucide-react";
 
 export default function QiratLanding() {
   return (
@@ -68,83 +69,42 @@ export default function QiratLanding() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                <svg
-                  className="w-8 h-8 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+            {[
+              {
+                Icon: Monitor,
+                title: "Web Development",
+                desc: "Custom web applications built with modern technologies.",
+                color: "text-teal-500",
+              },
+              {
+                Icon: Smartphone,
+                title: "Mobile Solutions",
+                desc: "Native & cross-platform apps for iOS and Android.",
+                color: "text-indigo-500",
+              },
+              {
+                Icon: Zap,
+                title: "Digital Innovation",
+                desc: "Innovative digital solutions for growth & efficiency.",
+                color: "text-orange-500",
+              },
+            ].map(({ Icon, title, desc, color }) => (
+              <div
+                key={title}
+                className="group text-center space-y-4 hover:scale-105 transform transition duration-300"
+              >
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-gray-200 transition-colors duration-300 ease-in-out">
+                  <Icon className={`w-8 h-8 ${color} stroke-2`} />
+                </div>
+                <h3 className="text-xl font-medium text-gray-900 group-hover:text-opacity-90 transition duration-300">
+                  {title}
+                </h3>
+                <p className="text-gray-600">{desc}</p>
               </div>
-              <h3 className="text-xl font-medium text-gray-900">
-                Web Development
-              </h3>
-              <p className="text-gray-600">
-                Custom web applications built with modern technologies and best
-                practices
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                <svg
-                  className="w-8 h-8 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-medium text-gray-900">
-                Mobile Solutions
-              </h3>
-              <p className="text-gray-600">
-                Native and cross-platform mobile applications for iOS and
-                Android
-              </p>
-            </div>
-
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                <svg
-                  className="w-8 h-8 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-medium text-gray-900">
-                Digital Innovation
-              </h3>
-              <p className="text-gray-600">
-                Innovative digital solutions that drive business growth and
-                efficiency
-              </p>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </section>{" "}
       {/* About Section */}
       <section className="px-6 lg:px-8 py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto">
