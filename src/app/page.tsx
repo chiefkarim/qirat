@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import Link from "next/link";
 import { Monitor, Smartphone, Zap } from "lucide-react";
+import { FloatingHeaderImage } from "@/components/custom/header-image";
 
 export default function QiratLanding() {
   return (
@@ -41,16 +42,13 @@ export default function QiratLanding() {
             </div>
 
             {/* Right Image */}
-            <div className="relative">
-              <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
-                <Image
-                  src="/images/header.jpg"
-                  alt="3D geometric shapes on wooden surface with dramatic lighting"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+            <div
+              className="relative"
+              style={{
+                transformStyle: "preserve-3d",
+              }}
+            >
+              <FloatingHeaderImage />
             </div>
           </div>
         </div>
