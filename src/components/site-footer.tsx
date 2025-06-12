@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function SiteFooter() {
@@ -7,24 +8,12 @@ export function SiteFooter() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="w-6 h-6 relative">
-                <svg viewBox="0 0 32 32" className="w-full h-full fill-black">
-                  <rect x="4" y="4" width="10" height="10" />
-                  <rect x="18" y="4" width="10" height="10" />
-                  <rect x="4" y="18" width="10" height="10" />
-                  <rect x="18" y="18" width="10" height="10" />
-                  <rect
-                    x="11"
-                    y="11"
-                    width="10"
-                    height="10"
-                    fill="white"
-                    stroke="black"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </div>
-              <span className="ml-2 text-lg font-medium">Qirat</span>
+              <Link href="/" className="flex items-center">
+                <div className="w-6 h-6 relative">
+                  <Image alt="logo" src="/logo.png" width={52} height={52} />
+                </div>
+                <span className="ml-2 text-lg font-medium">Qirat</span>
+              </Link>
             </div>
             <p className="text-gray-600 text-sm">
               Crafting digital solutions and empowering Algerian innovation.
